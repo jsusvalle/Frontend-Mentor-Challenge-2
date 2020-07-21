@@ -1,3 +1,204 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
 
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 1.4rem;
+  font-family: "Inter", sans-serif;
+}
+
+p {
+  margin: 0;
+}
+
+div.container {
+  width: 85%;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 992px) {
+  div.container {
+    width: 85%;
+  }
+}
+
+p.today-up {
+  padding: 2rem 0;
+  color: #1db489;
+}
+p.today-up:before {
+  display: inline-block;
+  content: "";
+  width: 10px;
+  height: 5px;
+  background-image: url(../../challenge-assets/images/icon-up.svg);
+  background-repeat: no-repeat;
+}
+
+p.today-down {
+  padding: 2rem 0;
+  color: #dc414c;
+}
+p.today-down:before {
+  display: inline-block;
+  content: "";
+  width: 10px;
+  height: 5px;
+  background-image: url(../../challenge-assets/images/icon-down.svg);
+  background-repeat: no-repeat;
+}
+
+header.header {
+  padding: 3.5rem 0;
+}
+@media only screen and (min-width: 992px) {
+  header.header {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+  }
+}
+header.header .title h1 {
+  margin: 0;
+}
+header.header .title p {
+  margin-top: 0.8rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid #a8a8a8;
+  color: #818181;
+  font-weight: 700;
+}
+@media only screen and (min-width: 992px) {
+  header.header .title p {
+    border: none;
+    padding-bottom: 0;
+  }
+}
+header.header .toggle {
+  display: flex;
+  justify-content: space-between;
+}
+@media only screen and (min-width: 992px) {
+  header.header .toggle {
+    justify-content: center;
+    align-items: center;
+  }
+}
+header.header .toggle p {
+  margin-top: 1.2rem;
+  color: #818181;
+  font-weight: 700;
+  padding-right: 2rem;
+}
+@media only screen and (min-width: 992px) {
+  header.header .toggle p {
+    margin-top: 0;
+  }
+}
+header.header .toggle .btn {
+  margin-top: 1.2rem;
+}
+@media only screen and (min-width: 992px) {
+  header.header .toggle .btn {
+    margin-top: 0;
+    margin-right: 2rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  section.section-followers {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+  }
+}
+section.section-followers .card {
+  padding: 2rem 0;
+  text-align: center;
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+  background-color: #f5f7ff;
+}
+section.section-followers .card.border-fb {
+  border-top: 5px solid #198ff5;
+}
+section.section-followers .card.border-tw {
+  border-top: 5px solid #1ca0f2;
+}
+section.section-followers .card.border-ig {
+  border-top: 5px solid transparent;
+  border-image: linear-gradient(to right, #fdc468 0%, #df4996 100%) 1;
+}
+section.section-followers .card.border-yt {
+  border-top: 5px solid #c4032a;
+}
+section.section-followers .card .social-user {
+  padding: 2rem 0;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+section.section-followers .card .social-user img {
+  margin-right: 0.5rem;
+}
+section.section-followers .card .social-user a {
+  text-decoration: none;
+  font-weight: 700;
+  color: #818181;
+}
+section.section-followers .card p.num-follows {
+  font-size: 5rem;
+  font-weight: 700;
+}
+section.section-followers .card p.text {
+  padding-top: 0.5rem;
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+  color: #818181;
+}
+
+section.section-overview h2 {
+  margin: 4rem 0;
+  color: #818181;
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+@media only screen and (min-width: 992px) {
+  section.section-overview .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 2rem;
+  }
+}
+section.section-overview .grid .card-today {
+  background-color: #f5f7ff;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+  padding: 3rem 2rem 2rem;
+}
+section.section-overview .grid .card-today .numbers {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+section.section-overview .grid .card-today .numbers p.text {
+  color: #696969;
+  font-weight: 700;
+}
+section.section-overview .grid .card-today .percentaje {
+  display: flex;
+  justify-content: space-between;
+}
+section.section-overview .grid .card-today .percentaje p.num {
+  font-size: 4rem;
+  font-weight: 700;
+}
 
 /*# sourceMappingURL=styles.css.map */

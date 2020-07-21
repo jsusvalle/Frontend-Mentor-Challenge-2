@@ -5,15 +5,161 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="32x32" href="./challenge-assets/images/favicon-32x32.png">
+    <link rel="stylesheet" href="/static/normalize.css">
+    <link rel="stylesheet" href="/static/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <title>Frontend Mentor | Social Media Dashboard</title>
 </head>
 
 <body>
 
+    <div class="container">
+        <header class="header">
+            <div class="title">
+                <h1>Social Media Dashboar</h1>
+                <p>Total Followers: 23,004</p>
+            </div>
+            <div class="toggle">
+                <p>Dark Mode</p>
+                <input type="button" class="btn" value="True">
+            </div>
+        </header>
 
-    <div class="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Your Name Here</a>.
+        <section class="section-followers">
+            <div class="card border-fb">
+                <div class="social-user">
+                    <img src="/challenge-assets/images/icon-facebook.svg" alt=""> <a href="facebook.com">@nathanf</a>
+                </div>
+                <p class="num-follows">1987</p>
+                <p class="text">Followers</p>
+                <p class="today-up">12 Today</p>
+            </div>
+
+            <div class="card border-tw">
+                <div class="social-user">
+                    <img src="/challenge-assets/images/icon-twitter.svg" alt=""> <a href="twitter.com">@nathanf</a>
+                </div>
+                <p class="num-follows">1044</p>
+                <p class="text">Followers</p>
+                <p class="today-up">99 Today</p>
+            </div>
+
+            <div class="card border-ig">
+                <div class="social-user">
+                    <img src="/challenge-assets/images/icon-instagram.svg" alt=""> <a href="instagram.com">@realnathanf</a>
+                </div>
+                <p class="num-follows">11k</p>
+                <p class="text">Followers</p>
+                <p class="today-up">1099 Today</p>
+            </div>
+
+            <div class="card border-yt">
+                <div class="social-user">
+                    <img src="/challenge-assets/images/icon-youtube.svg" alt=""> <a href="youtube.com">Nathan F.</a>
+                </div>
+                <p class="num-follows">8239</p>
+                <p class="text">Subscribers</p>
+                <p class="today-down">144 Today</p>
+            </div>
+        </section>
+
+        <section class="section-overview">
+            <h2>Overview - Today</h2>
+            <div class="grid">
+                <div class="card-today">
+                    <div class="numbers">
+                        <p class="text">Page Views</p>
+                        <img src="/challenge-assets/images/icon-facebook.svg" alt="">
+                    </div>
+                    <div class="percentaje">
+                        <p class="num">87</p>
+                        <p class="today-up">3%</p>
+                    </div>
+                </div>
+
+                <div class="card-today">
+                    <div class="numbers">
+                        <p class="text">Likes</p>
+                        <img src="/challenge-assets/images/icon-facebook.svg" alt="">
+                    </div>
+                    <div class="percentaje">
+                        <p class="num">52</p>
+                        <p class="today-down">2%</p>
+                    </div>
+                </div>
+
+                <div class="card-today">
+                    <div class="numbers">
+                        <p class="text">Likes</p>
+                        <img src="/challenge-assets/images/icon-instagram.svg" alt="">
+                    </div>
+                    <div class="percentaje">
+                        <p class="num">5462</p>
+                        <p class="today-up">2257%</p>
+                    </div>
+                </div>
+
+                <div class="card-today">
+                    <div class="numbers">
+                        <p class="text">Profile Views</p>
+                        <img src="/challenge-assets/images/icon-instagram.svg" alt="">
+                    </div>
+                    <div class="percentaje">
+                        <p class="num">52k</p>
+                        <p class="today-up">1375%</p>
+                    </div>
+                </div>
+
+                <div class="card-today">
+                    <div class="numbers">
+                        <p class="text">Retweets</p>
+                        <img src="/challenge-assets/images/icon-twitter.svg" alt="">
+                    </div>
+                    <div class="percentaje">
+                        <p class="num">117</p>
+                        <p class="today-up">303%</p>
+                    </div>
+                </div>
+
+                <div class="card-today">
+                    <div class="numbers">
+                        <p class="text">Likes</p>
+                        <img src="/challenge-assets/images/icon-twitter.svg" alt="">
+                    </div>
+                    <div class="percentaje">
+                        <p class="num">507</p>
+                        <p class="today-up">553%</p>
+                    </div>
+                </div>
+
+                <div class="card-today">
+                    <div class="numbers">
+                        <p class="text">Likes</p>
+                        <img src="/challenge-assets/images/icon-youtube.svg" alt="">
+                    </div>
+                    <div class="percentaje">
+                        <p class="num">107</p>
+                        <p class="today-down">19%</p>
+                    </div>
+                </div>
+
+                <div class="card-today">
+                    <div class="numbers">
+                        <p class="text">Total Views</p>
+                        <img src="/challenge-assets/images/icon-youtube.svg" alt="">
+                    </div>
+                    <div class="percentaje">
+                        <p class="num">1407</p>
+                        <p class="today-down">12%</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
+
+    <!--<div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Your Name Here</a>.
+    </div>-->
 </body>
 
 </html>

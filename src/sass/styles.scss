@@ -1,0 +1,116 @@
+//* Colors
+$lime-Green: hsl(163, 72%, 41%);
+$bright-Red: hsl(356, 69%, 56%);
+$facebook: hsl(208, 92%, 53%);
+$twitter: hsl(203, 89%, 53%);
+$instagram: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%);
+$youTube: hsl(348, 97%, 39%);
+//* Dark Theme
+$Toggle: linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%);
+//* Light Theme
+$Toggle: hsl(230, 22%, 74%);
+//* Neutral
+// Dark Theme
+$very-Dark-Blue-BG: hsl(230, 17%, 14%);
+$very-Dark-Blue-Top-BG-Pattern: hsl(232, 19%, 15%);
+$dark-Desaturated-Blue-Card-BG: hsl(228, 28%, 20%);
+$desaturated-Blue-Text: hsl(228, 34%, 66%);
+$white-Text: hsl(0, 0%, 100%);
+// Light Theme
+$white-BG: hsl(0, 0%, 100%);
+$very-Pale-Blue-Top-BG-Pattern: hsl(225, 100%, 98%);
+$light-Grayish-Blue-Card-BG: hsl(227, 47%, 96%);
+$dark-Grayish-Blue-Text: hsl(228, 12%, 44%);
+$very-Dark-Blue-Text: hsl(230, 17%, 14%);
+//
+//
+//* Media Querys
+@mixin mq-mobile {
+    @media only screen and (min-width: 480px) {
+        @content;
+    }
+}
+
+@mixin mq-tablet {
+    @media only screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin mq-desktop {
+    @media only screen and (min-width: 992px) {
+        @content;
+    }
+}
+
+@mixin mq-desktop-large {
+    @media only screen and (min-width: 1440px) {
+        @content;
+    }
+}
+
+//* Container
+@mixin container($width, $my:0, $mx:auto) {
+    width: $width;
+    margin: $my $mx;
+}
+
+//HTML
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 1.4rem;
+    font-family: 'Inter', sans-serif;
+}
+
+p {
+    margin: 0;
+}
+
+//* Globals
+div.container {
+    width: 85%;
+    margin: 0 auto;
+    @include mq-desktop {
+        width: 85%;
+    }
+}
+
+p.today-up {
+    padding: 2rem 0;
+    color: $lime-Green;
+    &:before {
+        display: inline-block;
+        content: "";
+        width: 10px;
+        height: 5px;
+        background-image: url(../../challenge-assets/images/icon-up.svg);
+        background-repeat: no-repeat;
+    }
+}
+
+p.today-down {
+    padding: 2rem 0;
+    color: $bright-Red;
+    &:before {
+        display: inline-block;
+        content: "";
+        width: 10px;
+        height: 5px;
+        background-image: url(../../challenge-assets/images/icon-down.svg);
+        background-repeat: no-repeat;
+    }
+}
+
+@import "header";
+@import "section-followers";
+@import "section-overview";
