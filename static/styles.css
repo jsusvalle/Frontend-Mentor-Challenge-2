@@ -54,6 +54,48 @@ p.today-down:before {
   background-repeat: no-repeat;
 }
 
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1e202a;
+  }
+}
+body.is-dark-mode {
+  background-color: #1e202a;
+}
+body.is-dark-mode header.header .title h1 {
+  color: white;
+}
+body.is-dark-mode header.header .title p {
+  color: #b3b3b3;
+}
+body.is-dark-mode header.header .toggle p {
+  color: #b3b3b3;
+}
+body.is-dark-mode header.header .toggle-btn .switch {
+  background-image: linear-gradient(to right, #378fe6 0%, #3eda82 100%);
+}
+body.is-dark-mode header.header .toggle-btn .switch:before {
+  background: #1e202a;
+}
+body.is-dark-mode section.section-followers .card {
+  background-color: #252a41;
+}
+body.is-dark-mode section.section-followers .card p.num-follows {
+  color: white;
+}
+body.is-dark-mode section.section-overview h2 {
+  color: white;
+}
+body.is-dark-mode section.section-overview .grid .card-today {
+  background-color: #252a41;
+}
+body.is-dark-mode section.section-overview .grid .card-today .numbers p.text {
+  color: #b3b3b3;
+}
+body.is-dark-mode section.section-overview .grid .card-today .percentaje p.num {
+  color: white;
+}
+
 header.header {
   padding: 3.5rem 0;
 }
@@ -66,6 +108,11 @@ header.header {
 }
 header.header .title h1 {
   margin: 0;
+}
+@media (prefers-color-scheme: dark) {
+  header.header .title h1 {
+    color: white;
+  }
 }
 header.header .title p {
   margin-top: 0.8rem;
@@ -80,6 +127,11 @@ header.header .title p {
     padding-bottom: 0;
   }
 }
+@media (prefers-color-scheme: dark) {
+  header.header .title p {
+    color: #b3b3b3;
+  }
+}
 header.header .toggle {
   display: flex;
   justify-content: space-between;
@@ -91,7 +143,7 @@ header.header .toggle {
   }
 }
 header.header .toggle p {
-  margin-top: 1.2rem;
+  margin-top: 3rem;
   color: #818181;
   font-weight: 700;
   padding-right: 2rem;
@@ -101,13 +153,59 @@ header.header .toggle p {
     margin-top: 0;
   }
 }
-header.header .toggle .btn {
-  margin-top: 1.2rem;
+@media (prefers-color-scheme: dark) {
+  header.header .toggle p {
+    color: #b3b3b3;
+  }
+}
+header.header .toggle .toggle-btn {
+  margin-top: 2rem;
 }
 @media only screen and (min-width: 992px) {
-  header.header .toggle .btn {
+  header.header .toggle .toggle-btn {
+    margin-top: 0;
+  }
+}
+header.header .toggle .toggle-btn .checkbox {
+  display: none;
+}
+header.header .toggle .toggle-btn .checkbox:checked ~ .switch:before {
+  transform: translateX(3px);
+}
+@media only screen and (min-width: 992px) {
+  header.header .toggle .toggle-btn .checkbox {
     margin-top: 0;
     margin-right: 2rem;
+  }
+}
+header.header .toggle .toggle-btn .switch {
+  display: block;
+  border-radius: 20px;
+  background: #aeb3cb;
+  width: 80px;
+  height: 36px;
+  padding: 3px;
+  user-select: none;
+}
+@media (prefers-color-scheme: dark) {
+  header.header .toggle .toggle-btn .switch {
+    background-image: linear-gradient(to right, #378fe6 0%, #3eda82 100%);
+  }
+}
+header.header .toggle .toggle-btn .switch:before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: #ffffff;
+  border-radius: 50%;
+  transform: translateX(40px);
+  transition: 0.3s;
+  will-change: transform;
+}
+@media (prefers-color-scheme: dark) {
+  header.header .toggle .toggle-btn .switch:before {
+    background: #1e202a;
   }
 }
 
@@ -124,6 +222,11 @@ section.section-followers .card {
   margin-bottom: 2rem;
   border-radius: 0.5rem;
   background-color: #f5f7ff;
+}
+@media (prefers-color-scheme: dark) {
+  section.section-followers .card {
+    background-color: #252a41;
+  }
 }
 section.section-followers .card.border-fb {
   border-top: 5px solid #198ff5;
@@ -156,6 +259,11 @@ section.section-followers .card p.num-follows {
   font-size: 5rem;
   font-weight: 700;
 }
+@media (prefers-color-scheme: dark) {
+  section.section-followers .card p.num-follows {
+    color: white;
+  }
+}
 section.section-followers .card p.text {
   padding-top: 0.5rem;
   letter-spacing: 0.5rem;
@@ -168,6 +276,11 @@ section.section-overview h2 {
   color: #818181;
   font-weight: 700;
   font-size: 2.5rem;
+}
+@media (prefers-color-scheme: dark) {
+  section.section-overview h2 {
+    color: white;
+  }
 }
 @media only screen and (min-width: 992px) {
   section.section-overview .grid {
@@ -183,6 +296,11 @@ section.section-overview .grid .card-today {
   margin-bottom: 2rem;
   padding: 3rem 2rem 2rem;
 }
+@media (prefers-color-scheme: dark) {
+  section.section-overview .grid .card-today {
+    background-color: #252a41;
+  }
+}
 section.section-overview .grid .card-today .numbers {
   display: flex;
   justify-content: space-between;
@@ -192,6 +310,11 @@ section.section-overview .grid .card-today .numbers p.text {
   color: #696969;
   font-weight: 700;
 }
+@media (prefers-color-scheme: dark) {
+  section.section-overview .grid .card-today .numbers p.text {
+    color: #b3b3b3;
+  }
+}
 section.section-overview .grid .card-today .percentaje {
   display: flex;
   justify-content: space-between;
@@ -199,6 +322,11 @@ section.section-overview .grid .card-today .percentaje {
 section.section-overview .grid .card-today .percentaje p.num {
   font-size: 4rem;
   font-weight: 700;
+}
+@media (prefers-color-scheme: dark) {
+  section.section-overview .grid .card-today .percentaje p.num {
+    color: white;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

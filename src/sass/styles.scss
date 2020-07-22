@@ -49,6 +49,12 @@ $very-Dark-Blue-Text: hsl(230, 17%, 14%);
     }
 }
 
+@mixin dark-mode {
+    @media (prefers-color-scheme: dark) {
+        @content;
+    }
+}
+
 //* Container
 @mixin container($width, $my:0, $mx:auto) {
     width: $width;
@@ -108,6 +114,69 @@ p.today-down {
         height: 5px;
         background-image: url(../../challenge-assets/images/icon-down.svg);
         background-repeat: no-repeat;
+    }
+}
+
+//* Dark Mode
+@include dark-mode {
+    body {
+        background-color: $very-Dark-Blue-BG;
+    }
+}
+
+//* Toggle Dark Mode
+body.is-dark-mode {
+    background-color: $very-Dark-Blue-BG;
+    header.header {
+        .title {
+            h1 {
+                color: $white-Text;
+            }
+            p {
+                color: #b3b3b3;
+            }
+        }
+        .toggle {
+            p {
+                color: #b3b3b3;
+            }
+        }
+        .toggle-btn {
+            .switch {
+                background-image: linear-gradient(to right, hsl(210, 78%, 56%) 0%, hsl(146, 68%, 55%) 100%);
+                &:before {
+                    background: $very-Dark-Blue-BG;
+                }
+            }
+        }
+    }
+    section.section-followers {
+        .card {
+            background-color: $dark-Desaturated-Blue-Card-BG;
+            p.num-follows {
+                color: $white-Text;
+            }
+        }
+    }
+    section.section-overview {
+        h2 {
+            color: $white-Text;
+        }
+        .grid {
+            .card-today {
+                background-color: $dark-Desaturated-Blue-Card-BG;
+                .numbers {
+                    p.text {
+                        color: #b3b3b3;
+                    }
+                }
+                .percentaje {
+                    p.num {
+                        color: $white-Text;
+                    }
+                }
+            }
+        }
     }
 }
 

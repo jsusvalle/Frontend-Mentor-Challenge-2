@@ -10,6 +10,9 @@ section.section-followers {
         margin-bottom: 2rem;
         border-radius: .5rem;
         background-color: $very-Pale-Blue-Top-BG-Pattern;
+        @include dark-mode {
+            background-color: $dark-Desaturated-Blue-Card-BG;
+        }
         &.border-fb {
             border-top: 5px solid $facebook;
         }
@@ -40,6 +43,9 @@ section.section-followers {
         p.num-follows {
             font-size: 5rem;
             font-weight: 700;
+            @include dark-mode {
+                color: $white-Text;
+            }
         }
         p.text {
             padding-top: .5rem;
