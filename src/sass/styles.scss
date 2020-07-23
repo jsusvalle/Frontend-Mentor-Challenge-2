@@ -118,13 +118,6 @@ p.today-down {
 }
 
 //* Dark Mode
-@include dark-mode {
-    body {
-        background-color: $very-Dark-Blue-BG;
-    }
-}
-
-//* Toggle Dark Mode
 body.is-dark-mode {
     background-color: $very-Dark-Blue-BG;
     header.header {
@@ -153,6 +146,9 @@ body.is-dark-mode {
     section.section-followers {
         .card {
             background-color: $dark-Desaturated-Blue-Card-BG;
+            &:hover {
+                background-color: hsl(228, 20%, 25%);
+            }
             p.num-follows {
                 color: $white-Text;
             }
@@ -165,6 +161,9 @@ body.is-dark-mode {
         .grid {
             .card-today {
                 background-color: $dark-Desaturated-Blue-Card-BG;
+                &:hover {
+                    background-color: hsl(228, 20%, 25%);
+                }
                 .numbers {
                     p.text {
                         color: #b3b3b3;

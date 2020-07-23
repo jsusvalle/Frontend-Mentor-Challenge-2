@@ -54,11 +54,6 @@ p.today-down:before {
   background-repeat: no-repeat;
 }
 
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: #1e202a;
-  }
-}
 body.is-dark-mode {
   background-color: #1e202a;
 }
@@ -80,6 +75,9 @@ body.is-dark-mode header.header .toggle-btn .switch:before {
 body.is-dark-mode section.section-followers .card {
   background-color: #252a41;
 }
+body.is-dark-mode section.section-followers .card:hover {
+  background-color: #33384d;
+}
 body.is-dark-mode section.section-followers .card p.num-follows {
   color: white;
 }
@@ -88,6 +86,9 @@ body.is-dark-mode section.section-overview h2 {
 }
 body.is-dark-mode section.section-overview .grid .card-today {
   background-color: #252a41;
+}
+body.is-dark-mode section.section-overview .grid .card-today:hover {
+  background-color: #33384d;
 }
 body.is-dark-mode section.section-overview .grid .card-today .numbers p.text {
   color: #b3b3b3;
@@ -109,11 +110,6 @@ header.header {
 header.header .title h1 {
   margin: 0;
 }
-@media (prefers-color-scheme: dark) {
-  header.header .title h1 {
-    color: white;
-  }
-}
 header.header .title p {
   margin-top: 0.8rem;
   padding-bottom: 3rem;
@@ -125,11 +121,6 @@ header.header .title p {
   header.header .title p {
     border: none;
     padding-bottom: 0;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  header.header .title p {
-    color: #b3b3b3;
   }
 }
 header.header .toggle {
@@ -151,11 +142,6 @@ header.header .toggle p {
 @media only screen and (min-width: 992px) {
   header.header .toggle p {
     margin-top: 0;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  header.header .toggle p {
-    color: #b3b3b3;
   }
 }
 header.header .toggle .toggle-btn {
@@ -186,11 +172,7 @@ header.header .toggle .toggle-btn .switch {
   height: 36px;
   padding: 3px;
   user-select: none;
-}
-@media (prefers-color-scheme: dark) {
-  header.header .toggle .toggle-btn .switch {
-    background-image: linear-gradient(to right, #378fe6 0%, #3eda82 100%);
-  }
+  cursor: pointer;
 }
 header.header .toggle .toggle-btn .switch:before {
   content: "";
@@ -202,11 +184,6 @@ header.header .toggle .toggle-btn .switch:before {
   transform: translateX(40px);
   transition: 0.3s;
   will-change: transform;
-}
-@media (prefers-color-scheme: dark) {
-  header.header .toggle .toggle-btn .switch:before {
-    background: #1e202a;
-  }
 }
 
 @media only screen and (min-width: 992px) {
@@ -222,11 +199,10 @@ section.section-followers .card {
   margin-bottom: 2rem;
   border-radius: 0.5rem;
   background-color: #f5f7ff;
+  transition: background-color 0.5s ease;
 }
-@media (prefers-color-scheme: dark) {
-  section.section-followers .card {
-    background-color: #252a41;
-  }
+section.section-followers .card:hover {
+  background-color: #c7c9d1;
 }
 section.section-followers .card.border-fb {
   border-top: 5px solid #198ff5;
@@ -259,11 +235,6 @@ section.section-followers .card p.num-follows {
   font-size: 5rem;
   font-weight: 700;
 }
-@media (prefers-color-scheme: dark) {
-  section.section-followers .card p.num-follows {
-    color: white;
-  }
-}
 section.section-followers .card p.text {
   padding-top: 0.5rem;
   letter-spacing: 0.5rem;
@@ -276,11 +247,6 @@ section.section-overview h2 {
   color: #818181;
   font-weight: 700;
   font-size: 2.5rem;
-}
-@media (prefers-color-scheme: dark) {
-  section.section-overview h2 {
-    color: white;
-  }
 }
 @media only screen and (min-width: 992px) {
   section.section-overview .grid {
@@ -295,11 +261,10 @@ section.section-overview .grid .card-today {
   border-radius: 0.5rem;
   margin-bottom: 2rem;
   padding: 3rem 2rem 2rem;
+  transition: background-color 0.5s ease;
 }
-@media (prefers-color-scheme: dark) {
-  section.section-overview .grid .card-today {
-    background-color: #252a41;
-  }
+section.section-overview .grid .card-today:hover {
+  background-color: #c7c9d1;
 }
 section.section-overview .grid .card-today .numbers {
   display: flex;
@@ -310,11 +275,6 @@ section.section-overview .grid .card-today .numbers p.text {
   color: #696969;
   font-weight: 700;
 }
-@media (prefers-color-scheme: dark) {
-  section.section-overview .grid .card-today .numbers p.text {
-    color: #b3b3b3;
-  }
-}
 section.section-overview .grid .card-today .percentaje {
   display: flex;
   justify-content: space-between;
@@ -322,11 +282,6 @@ section.section-overview .grid .card-today .percentaje {
 section.section-overview .grid .card-today .percentaje p.num {
   font-size: 4rem;
   font-weight: 700;
-}
-@media (prefers-color-scheme: dark) {
-  section.section-overview .grid .card-today .percentaje p.num {
-    color: white;
-  }
 }
 
 /*# sourceMappingURL=styles.css.map */

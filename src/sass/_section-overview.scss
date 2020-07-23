@@ -4,9 +4,6 @@ section.section-overview {
         color: #818181;
         font-weight: 700;
         font-size: 2.5rem;
-        @include dark-mode {
-            color: $white-Text;
-        }
     }
     .grid {
         @include mq-desktop {
@@ -20,8 +17,9 @@ section.section-overview {
             border-radius: .5rem;
             margin-bottom: 2rem;
             padding: 3rem 2rem 2rem;
-            @include dark-mode {
-                background-color: $dark-Desaturated-Blue-Card-BG;
+            transition: background-color .5s ease;
+            &:hover {
+                background-color: hsl(227, 9%, 80%);
             }
             .numbers {
                 display: flex;
@@ -30,9 +28,6 @@ section.section-overview {
                 p.text {
                     color: #696969;
                     font-weight: 700;
-                    @include dark-mode {
-                        color: #b3b3b3;
-                    }
                 }
             }
             .percentaje {
@@ -41,9 +36,6 @@ section.section-overview {
                 p.num {
                     font-size: 4rem;
                     font-weight: 700;
-                    @include dark-mode {
-                        color: $white-Text;
-                    }
                 }
             }
         }
